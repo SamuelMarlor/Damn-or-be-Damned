@@ -9,11 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public float gravity = 9.8f;
 
-    Vector3 velocity;
+    System.Numerics.Vector3 velocity;
 
     bool isMoving;
 
-    private Vector3 lastPosition = new System.Numerics.Vector3(0f, 0f, 0f);
+    private System.Numerics.Vector3 lastPosition = new System.Numerics.Vector3(0f, 0f, 0f);
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         //creating the moving vector
-        Vector3 move = transform.right * x + transform.forward * z;
+        UnityEngine.Vector3 move = transform.right * x + transform.forward * z;
 
 
     }
