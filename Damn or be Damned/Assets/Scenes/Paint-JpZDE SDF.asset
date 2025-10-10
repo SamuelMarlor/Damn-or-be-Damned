@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - BEVEL_ON
   - GLOW_ON
   - UNDERLAY_ON
   m_InvalidKeywords: []
@@ -102,14 +101,14 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 0.7075472, g: 0, b: 0, a: 1}
-    - _GlowColor: {r: 0.4716981, g: 0, b: 0, a: 0.5}
+    - _FaceColor: {r: 0.7075471, g: 0, b: 0, a: 0}
+    - _GlowColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.4245283, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.42452827, g: 0, b: 0, a: 0}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0.6415094, g: 0, b: 0, a: 0.5}
+    - _UnderlayColor: {r: 0.6415094, g: 0, b: 0, a: 0.64705884}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!28 &-5005745616915395371
