@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3956325}
   m_Layer: 0
   m_Name: Plane.001 (17)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 22797177}
   m_Layer: 0
   m_Name: Eyes.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 54480970}
   m_Layer: 0
   m_Name: Plane.001 (22)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 61160507}
   m_Layer: 0
   m_Name: Plane.001 (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 68959809}
   m_Layer: 0
   m_Name: Cube.015 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 73266233}
   - component: {fileID: 73266232}
   - component: {fileID: 73266234}
+  - component: {fileID: 73266235}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -778,11 +779,13 @@ Transform:
   m_GameObject: {fileID: 73266231}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.55, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -26.257034, y: 1.198, z: -44.826427}
+  m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1618330448}
+  - {fileID: 330585546}
+  - {fileID: 1738359458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &73266234
@@ -797,8 +800,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014d134deaa04a44b919c177bda1f691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 6
   gravity: 9.8
+  groundCheck: {fileID: 1738359458}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &73266235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73266231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f39de50feb53e3469bbdd0929d47325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 500
+  topClamp: -90
+  bottomClamp: 90
 --- !u!1 &73271435
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +836,7 @@ GameObject:
   - component: {fileID: 73271439}
   m_Layer: 0
   m_Name: Plane.005 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1047,6 +1070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2641fdf8b976c914bae5907754c02cb4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1130,6 +1157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_002
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38b557a2daad28845b682c0341214d24, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1179,7 +1210,7 @@ GameObject:
   - component: {fileID: 131881049}
   m_Layer: 0
   m_Name: Cube.004 (37)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1316,7 +1347,7 @@ GameObject:
   - component: {fileID: 147739971}
   m_Layer: 0
   m_Name: Cube.004 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1464,6 +1495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vase (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc7e914c3b9a96b42b487dee4ac84493, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1486,7 +1521,7 @@ GameObject:
   - component: {fileID: 188071631}
   m_Layer: 0
   m_Name: Plane.005 (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1595,7 +1630,7 @@ GameObject:
   - component: {fileID: 193536920}
   m_Layer: 0
   m_Name: Cube.004 (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1705,7 +1740,7 @@ GameObject:
   - component: {fileID: 198548806}
   m_Layer: 0
   m_Name: Plane.005 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1849,7 @@ GameObject:
   - component: {fileID: 204337996}
   m_Layer: 0
   m_Name: Plane.001 (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1961,6 +1996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mattress (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deefc0cd0fe231c4cb3b8178f8af6bb5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1983,7 +2022,7 @@ GameObject:
   - component: {fileID: 224070402}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2183,7 +2222,7 @@ GameObject:
   - component: {fileID: 227163362}
   m_Layer: 0
   m_Name: Cube.004 (40)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2293,7 +2332,7 @@ GameObject:
   - component: {fileID: 232976757}
   m_Layer: 0
   m_Name: Plane.001 (21)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2402,7 +2441,7 @@ GameObject:
   - component: {fileID: 238751954}
   m_Layer: 0
   m_Name: Text (TMP) (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2651,6 +2690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71c0c33416efb4b4296b6ee4d1a0b39d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2681,7 +2724,7 @@ GameObject:
   - component: {fileID: 276947486}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2725,7 +2768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A MAN SHAN,T BE JUDGE BY HIS DEEDS BUT BY THE INTENT HIN WHICH HE MENT
+  m_text: 'A MAN SHAN''T BE JUDGE BY HIS DEEDS BUT BY THE INTENT HIN WHICH HE MENT
     THEM '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5694ff184f59df44a8942872ae8778b7, type: 2}
@@ -2881,7 +2924,7 @@ GameObject:
   - component: {fileID: 311671894}
   m_Layer: 0
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3247,11 +3290,11 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18, z: 0.15}
-  m_LocalScale: {x: 0.83333325, y: 0.5555556, z: 0.83333325}
+  m_LocalPosition: {x: 0, y: 1.17, z: 0.048}
+  m_LocalScale: {x: 0.6666666, y: 0.5555556, z: 0.6666666}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1618330448}
+  m_Father: {fileID: 73266233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
@@ -3311,7 +3354,7 @@ GameObject:
   - component: {fileID: 341094147}
   m_Layer: 0
   m_Name: Plane.001 (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3447,7 +3490,7 @@ GameObject:
   - component: {fileID: 368015725}
   m_Layer: 0
   m_Name: Cube.004 (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3557,7 +3600,7 @@ GameObject:
   - component: {fileID: 388257143}
   m_Layer: 0
   m_Name: Cube.004 (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3667,7 +3710,7 @@ GameObject:
   - component: {fileID: 391506667}
   m_Layer: 0
   m_Name: Plane.001 (24)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3948,6 +3991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_002 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38b557a2daad28845b682c0341214d24, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3970,7 +4017,7 @@ GameObject:
   - component: {fileID: 432202293}
   m_Layer: 0
   m_Name: Plane.001 (26)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4079,7 +4126,7 @@ GameObject:
   - component: {fileID: 435871856}
   m_Layer: 0
   m_Name: Plane.001 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4188,7 +4235,7 @@ GameObject:
   - component: {fileID: 449795389}
   m_Layer: 0
   m_Name: Plane.001 (18)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4297,7 +4344,7 @@ GameObject:
   - component: {fileID: 465902643}
   m_Layer: 0
   m_Name: Plane.005 (26)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4406,7 +4453,7 @@ GameObject:
   - component: {fileID: 481367212}
   m_Layer: 0
   m_Name: Cube.004 (33)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4516,7 +4563,7 @@ GameObject:
   - component: {fileID: 494505556}
   m_Layer: 0
   m_Name: Plane.005 (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4625,7 +4672,7 @@ GameObject:
   - component: {fileID: 499701198}
   m_Layer: 0
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,7 +4871,7 @@ GameObject:
   - component: {fileID: 518403801}
   m_Layer: 0
   m_Name: Cube.004 (39)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4934,7 +4981,7 @@ GameObject:
   - component: {fileID: 542765814}
   m_Layer: 0
   m_Name: Cube.004 (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5044,7 +5091,7 @@ GameObject:
   - component: {fileID: 548953840}
   m_Layer: 0
   m_Name: Cube.004 (35)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5154,7 +5201,7 @@ GameObject:
   - component: {fileID: 559136617}
   m_Layer: 0
   m_Name: Eyes.001 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5263,7 +5310,7 @@ GameObject:
   - component: {fileID: 579055529}
   m_Layer: 0
   m_Name: Cube.004 (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5373,7 +5420,7 @@ GameObject:
   - component: {fileID: 581339643}
   m_Layer: 0
   m_Name: Plane.001 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5482,7 +5529,7 @@ GameObject:
   - component: {fileID: 590773862}
   m_Layer: 0
   m_Name: Cube.004 (20)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5592,7 +5639,7 @@ GameObject:
   - component: {fileID: 595233518}
   m_Layer: 0
   m_Name: Cube.004 (27)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5823,7 +5870,7 @@ GameObject:
   - component: {fileID: 600563950}
   m_Layer: 0
   m_Name: Cube.004 (24)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5934,7 +5981,7 @@ GameObject:
   - component: {fileID: 602194189}
   m_Layer: 0
   m_Name: Plane.005 (24)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6043,7 +6090,7 @@ GameObject:
   - component: {fileID: 608016027}
   m_Layer: 0
   m_Name: Plane.001 (16)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6152,7 +6199,7 @@ GameObject:
   - component: {fileID: 639491488}
   m_Layer: 0
   m_Name: Plane.001 (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6261,7 +6308,7 @@ GameObject:
   - component: {fileID: 645801362}
   m_Layer: 0
   m_Name: Plane.001 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6370,7 +6417,7 @@ GameObject:
   - component: {fileID: 647523933}
   m_Layer: 0
   m_Name: Cube.016 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6480,7 +6527,7 @@ GameObject:
   - component: {fileID: 655703977}
   m_Layer: 0
   m_Name: Plane.001 (20)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6589,7 +6636,7 @@ GameObject:
   - component: {fileID: 665188041}
   m_Layer: 0
   m_Name: Cube.004 (34)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6726,7 +6773,7 @@ GameObject:
   - component: {fileID: 681807602}
   m_Layer: 0
   m_Name: Cube.004 (36)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6931,6 +6978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vase
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc7e914c3b9a96b42b487dee4ac84493, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6953,7 +7004,7 @@ GameObject:
   - component: {fileID: 719651301}
   m_Layer: 0
   m_Name: Plane.005 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7062,7 +7113,7 @@ GameObject:
   - component: {fileID: 748017790}
   m_Layer: 0
   m_Name: Plane.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7171,7 +7222,7 @@ GameObject:
   - component: {fileID: 766554404}
   m_Layer: 0
   m_Name: Cube.015 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7281,7 +7332,7 @@ GameObject:
   - component: {fileID: 766790175}
   m_Layer: 0
   m_Name: Cube.004 (13)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7391,7 +7442,7 @@ GameObject:
   - component: {fileID: 792572856}
   m_Layer: 0
   m_Name: Cube.004 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7501,7 +7552,7 @@ GameObject:
   - component: {fileID: 797412604}
   m_Layer: 0
   m_Name: Cube.004 (30)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7653,6 +7704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71c0c33416efb4b4296b6ee4d1a0b39d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7675,7 +7730,7 @@ GameObject:
   - component: {fileID: 805432140}
   m_Layer: 0
   m_Name: Plane.001 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7784,7 +7839,7 @@ GameObject:
   - component: {fileID: 814503410}
   m_Layer: 0
   m_Name: Cube.004 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7943,7 +7998,7 @@ GameObject:
   - component: {fileID: 834735357}
   m_Layer: 0
   m_Name: Plane.005 (12)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8052,7 +8107,7 @@ GameObject:
   - component: {fileID: 837882234}
   m_Layer: 0
   m_Name: Cube.004 (25)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8281,7 +8336,7 @@ GameObject:
   - component: {fileID: 890256281}
   m_Layer: 0
   m_Name: Cube.018
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8433,6 +8488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_002 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 38b557a2daad28845b682c0341214d24, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8493,6 +8552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fridge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1d2b04ae5eab9d4fab7a5c6971595c1, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8515,7 +8578,7 @@ GameObject:
   - component: {fileID: 937541136}
   m_Layer: 0
   m_Name: Cube.004 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8625,7 +8688,7 @@ GameObject:
   - component: {fileID: 998748561}
   m_Layer: 0
   m_Name: Cube.004 (28)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8735,7 +8798,7 @@ GameObject:
   - component: {fileID: 1004736847}
   m_Layer: 0
   m_Name: Plane.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8948,6 +9011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Papers_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71c0c33416efb4b4296b6ee4d1a0b39d, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8981,7 +9048,7 @@ GameObject:
   - component: {fileID: 1066755115}
   m_Layer: 0
   m_Name: Plane.005 (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9090,7 +9157,7 @@ GameObject:
   - component: {fileID: 1084679849}
   m_Layer: 0
   m_Name: Cube.018 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9319,7 +9386,7 @@ GameObject:
   - component: {fileID: 1116004649}
   m_Layer: 0
   m_Name: Plane.005 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9428,7 +9495,7 @@ GameObject:
   - component: {fileID: 1135978601}
   m_Layer: 0
   m_Name: Plane.005 (20)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9537,7 +9604,7 @@ GameObject:
   - component: {fileID: 1146808378}
   m_Layer: 0
   m_Name: Cube.018 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9647,7 +9714,7 @@ GameObject:
   - component: {fileID: 1148196180}
   m_Layer: 0
   m_Name: Plane.001 (23)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9756,7 +9823,7 @@ GameObject:
   - component: {fileID: 1152565217}
   m_Layer: 0
   m_Name: Plane.001 (15)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9865,7 +9932,7 @@ GameObject:
   - component: {fileID: 1161951631}
   m_Layer: 0
   m_Name: Cube.004 (23)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9975,7 +10042,7 @@ GameObject:
   - component: {fileID: 1162458585}
   m_Layer: 0
   m_Name: Plane.001 (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10084,7 +10151,7 @@ GameObject:
   - component: {fileID: 1180486955}
   m_Layer: 0
   m_Name: Plane.005 (21)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10193,7 +10260,7 @@ GameObject:
   - component: {fileID: 1186071308}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10304,7 +10371,7 @@ GameObject:
   - component: {fileID: 1213319344}
   m_Layer: 0
   m_Name: Cube.004 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10415,7 +10482,7 @@ GameObject:
   - component: {fileID: 1251056670}
   m_Layer: 0
   m_Name: Plane.005 (18)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10524,7 +10591,7 @@ GameObject:
   - component: {fileID: 1260200933}
   m_Layer: 0
   m_Name: Plane.001 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10633,7 +10700,7 @@ GameObject:
   - component: {fileID: 1271820663}
   m_Layer: 0
   m_Name: Plane.005 (22)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10742,7 +10809,7 @@ GameObject:
   - component: {fileID: 1303039156}
   m_Layer: 0
   m_Name: Cube.004 (31)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10890,6 +10957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: couch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98b9fbe1620539d429a3766242e6bff5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10912,7 +10983,7 @@ GameObject:
   - component: {fileID: 1337178367}
   m_Layer: 0
   m_Name: Plane.005 (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11020,7 +11091,7 @@ GameObject:
   - component: {fileID: 1340117320}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11202,7 +11273,7 @@ GameObject:
   - component: {fileID: 1363351503}
   m_Layer: 0
   m_Name: Plane.001 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11311,7 +11382,7 @@ GameObject:
   - component: {fileID: 1367550617}
   m_Layer: 0
   m_Name: Plane.001 (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11420,7 +11491,7 @@ GameObject:
   - component: {fileID: 1367618672}
   m_Layer: 0
   m_Name: Cube.004 (21)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11533,7 +11604,7 @@ GameObject:
   - component: {fileID: 1368448072}
   m_Layer: 0
   m_Name: Cube.004 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11670,7 +11741,7 @@ GameObject:
   - component: {fileID: 1373818182}
   m_Layer: 0
   m_Name: Plane.001 (27)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11779,7 +11850,7 @@ GameObject:
   - component: {fileID: 1375483877}
   m_Layer: 0
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11955,6 +12026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2641fdf8b976c914bae5907754c02cb4, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -12010,7 +12085,7 @@ GameObject:
   - component: {fileID: 1407262981}
   m_Layer: 0
   m_Name: Cube.004 (19)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12120,7 +12195,7 @@ GameObject:
   - component: {fileID: 1415639599}
   m_Layer: 0
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12229,7 +12304,7 @@ GameObject:
   - component: {fileID: 1451461808}
   m_Layer: 0
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12517,7 +12592,7 @@ GameObject:
   - component: {fileID: 1478387265}
   m_Layer: 0
   m_Name: Cube.004 (16)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12654,7 +12729,7 @@ GameObject:
   - component: {fileID: 1506058625}
   m_Layer: 0
   m_Name: Plane.005 (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12763,7 +12838,7 @@ GameObject:
   - component: {fileID: 1533864757}
   m_Layer: 0
   m_Name: Cube.004 (38)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12873,7 +12948,7 @@ GameObject:
   - component: {fileID: 1552569857}
   m_Layer: 0
   m_Name: Cube.004 (18)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13149,7 +13224,7 @@ GameObject:
   - component: {fileID: 1577799274}
   m_Layer: 0
   m_Name: Plane.005 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13256,8 +13331,6 @@ GameObject:
   - component: {fileID: 1618330451}
   - component: {fileID: 1618330450}
   - component: {fileID: 1618330449}
-  - component: {fileID: 1618330452}
-  - component: {fileID: 1618330453}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -13274,11 +13347,10 @@ Transform:
   m_GameObject: {fileID: 1618330447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.59, y: -1.0029, z: -43.6887}
-  m_LocalScale: {x: 1.2, y: 0.7970904, z: 0.67728007}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 330585546}
+  m_Children: []
   m_Father: {fileID: 73266233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1618330449
@@ -13357,48 +13429,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618330447}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &1618330452
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618330447}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1618330453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618330447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f39de50feb53e3469bbdd0929d47325, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  topClamp: -90
-  bottomClamp: 90
 --- !u!1 &1620621217
 GameObject:
   m_ObjectHideFlags: 0
@@ -13413,7 +13443,7 @@ GameObject:
   - component: {fileID: 1620621221}
   m_Layer: 0
   m_Name: Plane.001
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13522,7 +13552,7 @@ GameObject:
   - component: {fileID: 1623471692}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13632,7 +13662,7 @@ GameObject:
   - component: {fileID: 1629427988}
   m_Layer: 0
   m_Name: Text (TMP) (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13833,7 +13863,7 @@ GameObject:
   - component: {fileID: 1661701225}
   m_Layer: 0
   m_Name: Plane.001 (19)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13942,7 +13972,7 @@ GameObject:
   - component: {fileID: 1668079287}
   m_Layer: 0
   m_Name: Cube.018 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14052,7 +14082,7 @@ GameObject:
   - component: {fileID: 1687422680}
   m_Layer: 0
   m_Name: Plane.005 (10)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14161,7 +14191,7 @@ GameObject:
   - component: {fileID: 1691024798}
   m_Layer: 0
   m_Name: Eyes.001 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14308,6 +14338,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b5d07d2fc216df48a01bd3095b0f8b8, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14343,6 +14377,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7196802604745430461, guid: 71c0c33416efb4b4296b6ee4d1a0b39d, type: 3}
+--- !u!1 &1738359457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1738359458}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1738359458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738359457}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.87, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 73266233}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1744006031
 GameObject:
   m_ObjectHideFlags: 0
@@ -14357,7 +14422,7 @@ GameObject:
   - component: {fileID: 1744006036}
   m_Layer: 0
   m_Name: Cube.004 (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14613,7 +14678,7 @@ GameObject:
   - component: {fileID: 1776495881}
   m_Layer: 0
   m_Name: Plane.005 (14)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14722,7 +14787,7 @@ GameObject:
   - component: {fileID: 1778670997}
   m_Layer: 0
   m_Name: Plane.005 (17)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14831,7 +14896,7 @@ GameObject:
   - component: {fileID: 1782549474}
   m_Layer: 0
   m_Name: Plane.005 (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14967,7 +15032,7 @@ GameObject:
   - component: {fileID: 1833032989}
   m_Layer: 0
   m_Name: Cube.016 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15077,7 +15142,7 @@ GameObject:
   - component: {fileID: 1851869266}
   m_Layer: 0
   m_Name: Cube.016 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15188,7 +15253,7 @@ GameObject:
   - component: {fileID: 1858422941}
   m_Layer: 0
   m_Name: Cube.004 (22)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15298,7 +15363,7 @@ GameObject:
   - component: {fileID: 1859940341}
   m_Layer: 0
   m_Name: Plane.001 (11)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15407,7 +15472,7 @@ GameObject:
   - component: {fileID: 1862861422}
   m_Layer: 0
   m_Name: Cube.004 (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15609,7 +15674,7 @@ GameObject:
   - component: {fileID: 1899174962}
   m_Layer: 0
   m_Name: Cube.004 (6)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15720,7 +15785,7 @@ GameObject:
   - component: {fileID: 1899427157}
   m_Layer: 0
   m_Name: Plane.001 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15851,7 +15916,7 @@ GameObject:
   - component: {fileID: 1928083164}
   m_Layer: 0
   m_Name: Plane.005 (19)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16025,6 +16090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mattress
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deefc0cd0fe231c4cb3b8178f8af6bb5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16074,7 +16143,7 @@ GameObject:
   - component: {fileID: 1963921932}
   m_Layer: 0
   m_Name: Plane.005 (25)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16183,7 +16252,7 @@ GameObject:
   - component: {fileID: 1975455430}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16413,7 +16482,7 @@ GameObject:
   - component: {fileID: 2001016213}
   m_Layer: 0
   m_Name: Plane.005 (16)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16522,7 +16591,7 @@ GameObject:
   - component: {fileID: 2019108416}
   m_Layer: 0
   m_Name: Plane.005 (23)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16631,7 +16700,7 @@ GameObject:
   - component: {fileID: 2043339170}
   m_Layer: 0
   m_Name: Cube.004 (32)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16779,6 +16848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: couch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98b9fbe1620539d429a3766242e6bff5, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16828,7 +16901,7 @@ GameObject:
   - component: {fileID: 2060504241}
   m_Layer: 0
   m_Name: Cube.004 (41)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16938,7 +17011,7 @@ GameObject:
   - component: {fileID: 2078082145}
   m_Layer: 0
   m_Name: Cube.004 (26)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17048,7 +17121,7 @@ GameObject:
   - component: {fileID: 2093667055}
   m_Layer: 0
   m_Name: Plane.001 (25)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17195,6 +17268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fridge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c1d2b04ae5eab9d4fab7a5c6971595c1, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17244,7 +17321,7 @@ GameObject:
   - component: {fileID: 2103450010}
   m_Layer: 0
   m_Name: Plane.005 (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17353,7 +17430,7 @@ GameObject:
   - component: {fileID: 2133015040}
   m_Layer: 0
   m_Name: Cube.004 (17)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
