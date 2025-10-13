@@ -3,40 +3,39 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public bool isOpen = false;
+    public bool IsOpen = false;
     [SerializeField]
-    private bool isRotating = true;
+    private bool IsRotatingDoor = true;
     [SerializeField]
-    private float speed = 1f;
+    private float Speed = 1f;
     [Header("Roatation Configs")]
     [SerializeField]
-    private float rotationAmount = 90f;
+    private float RotationAmount = 90f;
     [SerializeField]
-    private float forwardDirection = 0f;
+    private float ForwardDirection = 0f;
 
-    private Vector3 startRotation;
+    private Vector3 StartRotation;
     private Vector3 Forward;
 
-    private Coroutine animationCoroutine;
+    private Coroutine AnimationCoroutine;
     private void Awake()
     {
-        startRotation = transform.rotation.eulerAngles;
+        StartRotation = transform.rotation.eulerAngles;
         Forward = transform.right;
     }
 
     public void Open (Vector3 UserPosition)
     {
-        if (!isOpen) return;
+        if (!IsOpen) return;
         {
-            if (animationCoroutine != null)
-                StopCoroutine(animationCoroutine);
+            if (AnimationCoroutine != null)
+                StopCoroutine(AnimationCoroutine);
         }
         
-        if (isRotatingDoor)
+        if (IsRotatingDoor)
         {
             float dot = Vector3.Dot(Forward, (UserPosition - transform.position).normalized);
-            Debug.log($"Dot: {dot.ToString("N3")}");
-            animationCoroutine = StartCoroutine(DoRotationOpen(dot));
+            AnimationCoroutine = StartCoroutine(DoRotationOpen(dot));
         }
     }
 
@@ -45,37 +44,37 @@ public class Door : MonoBehaviour
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation;
 
-        if (ForwardAmount >= forwardDirection)
+        if (ForwardAmount >= ForwardDirection)
         {
-            endRotation = Quaternion.Euler(new Vector3(0, startRotationRotation.y - rotationAmount,0));
+            endRotation = Quaternion.Euler(new Vector3(0, StartRotation.y - RotationAmount,0));
         }
         else
         {
-            endRotation = Quaternion.Euler(new Vector3(0, startRotationRotation.y + rotationAmount, 0));
+            endRotation = Quaternion.Euler(new Vector3(0, StartRotation.y + RotationAmount, 0));
         }
 
-        isOpen = true;
+        IsOpen = true;
 
         float time = 0;
         while (time < 1)
         {
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
-            time += Time.deltaTime * speed;
+            time += Time.deltaTime * Speed;
         }
     }
     
     public void Close()
     {
-        if (isOpen)
+        if (IsOpen)
         {
-            if (animationCoroutine != null)
+            if (AnimationCoroutine != null)
             {
-                StopCoroutine(animationCoroutine);
+                StopCoroutine(AnimationCoroutine);
             }
-            if (isRotatingDoor)
+            if (IsRotatingDoor)
             {
-                animationCoroutine = StartCoroutine(DoRotationClose());
+                AnimationCoroutine = StartCoroutine(DoRotationClose());
             }
         }
     }
@@ -85,14 +84,14 @@ public class Door : MonoBehaviour
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(StartRotation);
 
-        isOpen = false;
+        IsOpen = false;
 
         float time = 0;
         while (time < 1)
         {
             transform.rotation = Quaternion.Slerp(startRotation, endRotation, time);
             yield return null;
-            time += Time.deltaTime * speed;
+            time += Time.deltaTime * Speed;
         }
     }
 }

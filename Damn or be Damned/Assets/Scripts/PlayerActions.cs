@@ -19,7 +19,7 @@ public class PlayerActions : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<Door>(out Door door))
             {
-                if (door.isOpen)
+                if (door.IsOpen)
                 {
                     door.Close();
                 }
@@ -35,7 +35,7 @@ public class PlayerActions : MonoBehaviour
         if (Physics.Raycast(Camera.position, Camera.forward, out RaycastHit hit, MaxUseDistance, UseLayers) 
             && hit.collider.TryGetComponent<Door>(out Door door))
         {
-            if (door.isOpen)
+            if (door.IsOpen)
             {
                 UseText.SetText("Close \"E\"");
             }
