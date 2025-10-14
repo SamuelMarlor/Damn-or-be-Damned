@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class DoorInteraction : MonoBehaviour
+public class DoorInteraction : MonoBehaviour, IInteractable
 {
     public float openAngle = 90f;
     public float openSpeed = 2f;
@@ -20,13 +20,12 @@ public class DoorInteraction : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
+     
             if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
             _currentCoroutine = StartCoroutine(ToggleDoor());
-        }
+     
     }
 
     private IEnumerator ToggleDoor()
