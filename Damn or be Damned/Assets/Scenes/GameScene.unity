@@ -1112,7 +1112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0b99d767f17f146439f389ace51f410c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -89.6933
+      value: -89.779
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0b99d767f17f146439f389ace51f410c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2729,7 +2729,7 @@ Transform:
   m_GameObject: {fileID: 73266231}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.038, y: 1.198, z: -45.422462}
+  m_LocalPosition: {x: -96.38, y: 1.198, z: -88.638}
   m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5295,6 +5295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -9677,6 +9678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -12464,6 +12466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -14816,6 +14819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -14936,8 +14940,10 @@ GameObject:
   - component: {fileID: 360261852}
   - component: {fileID: 360261851}
   - component: {fileID: 360261850}
-  m_Layer: 0
-  m_Name: Sphere
+  - component: {fileID: 360261855}
+  - component: {fileID: 360261854}
+  m_Layer: 6
+  m_Name: FinalButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15026,12 +15032,45 @@ Transform:
   m_GameObject: {fileID: 360261849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -102.306, y: 1.3149, z: -89.728}
+  m_LocalPosition: {x: -102.306, y: 1.386, z: -89.808}
   m_LocalScale: {x: 0.6811, y: 0.52365404, z: 0.6876861}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &360261854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360261849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ce5ccf586d5d04a865f1ac5951dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 0
+  isSave: 1
+  isFinal: 1
+  IsOpen: 0
+  IsRotatingDoor: 1
+  Speed: 1
+  RotationAmount: 90
+  ForwardDirection: 0
+--- !u!114 &360261855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360261849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78cbe0b23168b994ab36831915050fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
 --- !u!1 &363432011
 GameObject:
   m_ObjectHideFlags: 0
@@ -16877,6 +16916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -17531,6 +17571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -20707,6 +20748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -23702,6 +23744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -25021,6 +25064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -27488,7 +27532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openAngle: -160
-  openSpeed: 2
+  openSpeed: 0.25
   isOpen: 0
 --- !u!114 &625281366
 MonoBehaviour:
@@ -27504,6 +27548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -36271,6 +36316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -40865,6 +40911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -41914,6 +41961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -43288,6 +43336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -52682,6 +52731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -53055,7 +53105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openAngle: -100
-  openSpeed: 2
+  openSpeed: 0.25
   isOpen: 0
 --- !u!114 &1192127856
 MonoBehaviour:
@@ -53071,6 +53121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -60731,6 +60782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -64740,6 +64792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -70104,6 +70157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -71811,7 +71865,7 @@ Transform:
   m_GameObject: {fileID: 1618330447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 123.17, y: 0, z: 76.74}
   m_LocalScale: {x: 1.2, y: 1.8, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -74549,13 +74603,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715362651}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.4385599, y: 0.4385599, z: 0.5546758, w: -0.5546758}
-  m_LocalPosition: {x: -48.598, y: -5.59, z: -21.3}
+  m_LocalRotation: {x: -0.41842788, y: 0.45812994, z: 0.57001585, w: -0.53862506}
+  m_LocalPosition: {x: -48.599, y: -5.609, z: -21.299839}
   m_LocalScale: {x: 84.974, y: 164.31702, z: 105.0002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1556103688}
-  m_LocalEulerAnglesHint: {x: -180, y: 103.336, z: 90}
+  m_LocalEulerAnglesHint: {x: -175.898, y: 103.336, z: 90}
 --- !u!65 &1715362653
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74606,6 +74660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -78888,6 +78943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 1
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -82339,6 +82395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 1
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -85823,6 +85880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -90823,6 +90881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDoor: 0
   isSave: 0
+  isFinal: 0
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1

@@ -5,7 +5,7 @@ public class Door : MonoBehaviour
 {
     public bool isDoor = true;
     public bool isSave = true;
-
+    public bool isFinal = false;
 
     public bool IsOpen = false;
     [SerializeField]

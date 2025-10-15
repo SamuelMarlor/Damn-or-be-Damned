@@ -48,14 +48,21 @@ public class PlayerActions : MonoBehaviour
                 
             }
             if (!door.isDoor)
-            {
-                if (door.isSave)
+            { 
+                if (!door.isFinal)
                 {
-                    UseText.SetText("Save");
+                    if (door.isSave)
+                    {
+                        UseText.SetText("Save");
+                    }
+                    if (!door.isSave)
+                    {
+                        UseText.SetText("Damn");
+                    }
                 }
-                if (!door.isSave)
+                if (door.isFinal)
                 {
-                    UseText.SetText("Damn");
+                    UseText.SetText("SEE YOUR FATE SEE YOUR FATE SEE YOUR FATE");
                 }
             }
             UseText.gameObject.SetActive(true);
