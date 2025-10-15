@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour, IInteractable
 {
     public bool isPressed = false;
-    public bool Save = true;
+    public bool Correct = true;
     private ButtonDestroy buttonDestroy;
     private PlayerMoralityScript playerMorality;
 
@@ -38,16 +38,16 @@ public class Button : MonoBehaviour, IInteractable
 
         if (playerMorality != null)
         {
-            playerMorality.RegisterChoice(Save);
+            playerMorality.RegisterChoice(Correct);
         }
 
-        if (Save)
+        if (Correct)
         {
-            Debug.Log("Player Chose To Save");
+            Debug.Log("Player Chose Correctly");
         }
-        if (!Save)
+        if (!Correct)
         {
-            Debug.Log("Player Chose To Damn");
+            Debug.Log("Player Chose Incorrectly");
         }
 
         if (buttonDestroy != null)
