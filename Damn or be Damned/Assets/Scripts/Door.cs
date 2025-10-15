@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public bool isDoor = true;
+    public bool isSave = true;
+
+
     public bool IsOpen = false;
     [SerializeField]
     private bool IsRotatingDoor = true;

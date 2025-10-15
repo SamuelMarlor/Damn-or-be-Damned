@@ -18,7 +18,7 @@ public class PlayerActions : MonoBehaviour
         if (Physics.Raycast(Camera.position, Camera.forward, out RaycastHit hit, MaxUseDistance, UseLayers))
         {
             if (hit.collider.TryGetComponent<Door>(out Door door))
-            {
+            { 
                 if (door.IsOpen)
                 {
                     door.Close();
@@ -35,13 +35,28 @@ public class PlayerActions : MonoBehaviour
         if (Physics.Raycast(Camera.position, Camera.forward, out RaycastHit hit, MaxUseDistance, UseLayers) 
             && hit.collider.TryGetComponent<Door>(out Door door))
         {
-            if (door.IsOpen)
+            if (door.isDoor)
             {
-                UseText.SetText("Close \"E\"");
+                if (door.IsOpen)
+                {
+                    UseText.SetText("Close \"E\"");
+                }
+                else
+                {
+                    UseText.SetText("Open \"E\"");
+                }
+                
             }
-            else
+            if (!door.isDoor)
             {
-                UseText.SetText("Open \"E\"");
+                if (door.isSave)
+                {
+                    UseText.SetText("Save");
+                }
+                if (!door.isSave)
+                {
+                    UseText.SetText("Damn");
+                }
             }
             UseText.gameObject.SetActive(true);
             UseText.transform.position = hit.point - (hit.point - Camera.position).normalized * 0.5f;

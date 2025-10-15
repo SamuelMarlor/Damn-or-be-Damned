@@ -2604,8 +2604,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73266231}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.257034, y: 1.198, z: -44.826427}
+  m_LocalRotation: {x: -0, y: 0.6880417, z: -0, w: 0.72567123}
+  m_LocalPosition: {x: -16.395, y: 1.198, z: -59.905}
   m_LocalScale: {x: 0.5669, y: 0.5669, z: 0.5669}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2613,7 +2613,7 @@ Transform:
   - {fileID: 330585546}
   - {fileID: 1738359458}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 86.951, z: 0}
 --- !u!114 &73266234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24269,7 +24269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848860314}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ff660eb1460994a86258146dbf723b, type: 3}
   m_Name: 
@@ -39369,7 +39369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330227822}
   - component: {fileID: 1330227823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skull&Bones - FrodoUndead_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39446,6 +39446,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1333595081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1333595082}
+  m_Layer: 0
+  m_Name: PlayerMorality
+  m_TagString: Morality
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1333595082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333595081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.343246, y: 1.7730987, z: -59.775253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334447400
 GameObject:
   m_ObjectHideFlags: 0
@@ -43832,6 +43863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ce5ccf586d5d04a865f1ac5951dd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoor: 1
+  isSave: 1
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -48425,8 +48458,9 @@ GameObject:
   - component: {fileID: 1565207153}
   - component: {fileID: 1565207152}
   - component: {fileID: 1565207151}
-  m_Layer: 0
-  m_Name: Button (1)
+  - component: {fileID: 1565207155}
+  m_Layer: 6
+  m_Name: Damn Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48524,6 +48558,25 @@ Transform:
   - {fileID: 1758678174}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 88.334, y: 54.539, z: 10.648}
+--- !u!114 &1565207155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565207150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ce5ccf586d5d04a865f1ac5951dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 0
+  isSave: 0
+  IsOpen: 0
+  IsRotatingDoor: 1
+  Speed: 1
+  RotationAmount: 90
+  ForwardDirection: 0
 --- !u!43 &1567049561
 Mesh:
   m_ObjectHideFlags: 0
@@ -54548,6 +54601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ce5ccf586d5d04a865f1ac5951dd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDoor: 1
+  isSave: 1
   IsOpen: 0
   IsRotatingDoor: 1
   Speed: 1
@@ -56957,8 +57012,8 @@ GameObject:
   - component: {fileID: 1758678177}
   - component: {fileID: 1758678176}
   - component: {fileID: 1758678175}
-  m_Layer: 0
-  m_Name: Button (3)
+  m_Layer: 6
+  m_Name: ButtonPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57871,8 +57926,10 @@ GameObject:
   - component: {fileID: 1783819917}
   - component: {fileID: 1783819916}
   - component: {fileID: 1783819915}
-  m_Layer: 0
-  m_Name: Button
+  - component: {fileID: 1783819919}
+  - component: {fileID: 1783819920}
+  m_Layer: 6
+  m_Name: Save Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57970,6 +58027,39 @@ Transform:
   - {fileID: 1825989763}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 88.334, y: 54.539, z: 10.648}
+--- !u!114 &1783819919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783819914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ce5ccf586d5d04a865f1ac5951dd18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoor: 0
+  isSave: 1
+  IsOpen: 0
+  IsRotatingDoor: 1
+  Speed: 1
+  RotationAmount: 90
+  ForwardDirection: 0
+--- !u!114 &1783819920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783819914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da7534dfd960694a8bde2d74c848d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  Save: 1
 --- !u!1 &1786855387
 GameObject:
   m_ObjectHideFlags: 0
@@ -58696,8 +58786,9 @@ GameObject:
   - component: {fileID: 1825989766}
   - component: {fileID: 1825989765}
   - component: {fileID: 1825989764}
-  m_Layer: 0
-  m_Name: Button (2)
+  - component: {fileID: 1825989767}
+  m_Layer: 6
+  m_Name: ButtonPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58795,6 +58886,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825989762}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1825989767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825989762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b83df293464954d9da22126548dc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827136668
 GameObject:
   m_ObjectHideFlags: 0
@@ -59134,7 +59237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859035637}
   - component: {fileID: 1859035638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: gold_wings_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67146,3 +67249,4 @@ SceneRoots:
   - {fileID: 2141062455}
   - {fileID: 921426773}
   - {fileID: 1637102185}
+  - {fileID: 1333595082}
