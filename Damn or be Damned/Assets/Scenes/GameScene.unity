@@ -39455,6 +39455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333595082}
+  - component: {fileID: 1333595083}
   m_Layer: 0
   m_Name: PlayerMorality
   m_TagString: Morality
@@ -39477,6 +39478,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1333595083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333595081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd2c749dc5b1094ab0c20747cafb537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoralityCount: 50
 --- !u!1 &1334447400
 GameObject:
   m_ObjectHideFlags: 0
@@ -48459,6 +48473,7 @@ GameObject:
   - component: {fileID: 1565207152}
   - component: {fileID: 1565207151}
   - component: {fileID: 1565207155}
+  - component: {fileID: 1565207156}
   m_Layer: 6
   m_Name: Damn Button
   m_TagString: Untagged
@@ -48577,6 +48592,20 @@ MonoBehaviour:
   Speed: 1
   RotationAmount: 90
   ForwardDirection: 0
+--- !u!114 &1565207156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565207150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da7534dfd960694a8bde2d74c848d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPressed: 0
+  Save: 0
 --- !u!43 &1567049561
 Mesh:
   m_ObjectHideFlags: 0
@@ -57012,6 +57041,7 @@ GameObject:
   - component: {fileID: 1758678177}
   - component: {fileID: 1758678176}
   - component: {fileID: 1758678175}
+  - component: {fileID: 1758678178}
   m_Layer: 6
   m_Name: ButtonPiece
   m_TagString: Untagged
@@ -57111,6 +57141,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758678173}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1758678178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758678173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b83df293464954d9da22126548dc54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1761713832
 PrefabInstance:
   m_ObjectHideFlags: 0
