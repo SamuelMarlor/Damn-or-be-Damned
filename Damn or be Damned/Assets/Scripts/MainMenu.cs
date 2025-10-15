@@ -10,8 +10,18 @@ public class MainMenus : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }
