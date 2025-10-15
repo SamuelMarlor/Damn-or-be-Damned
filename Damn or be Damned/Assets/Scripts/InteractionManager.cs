@@ -13,7 +13,7 @@ public class InteractionManager : MonoBehaviour
     {
         CheckForInteractable();
 
-        if(_currentInteractable != null && Input.GetKeyDown(KeyCode.E))
+        if (_currentInteractable != null && Input.GetKeyDown(KeyCode.E))
         {
             _currentInteractable.Interact();
         }
@@ -30,15 +30,26 @@ public class InteractionManager : MonoBehaviour
             {
                 if (_currentInteractable != interactable)
                 {
-                    //ResetOutLine();
+                    
                     _currentInteractable = interactable;
-
+                    StartCoroutine(ResetOutWithDelay(2f));
+                    
 
                 }
-                
+
             }
         }
         
     }
-    //private void ResetOutLine();
+
+    private System.Collections.IEnumerator ResetOutWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ResetOut();
+    }
+
+    private void ResetOut()
+    {
+        _currentInteractable = null;
+    }
 }

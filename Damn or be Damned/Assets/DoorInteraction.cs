@@ -25,20 +25,22 @@ public class DoorInteraction : MonoBehaviour, IInteractable
      
             if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
             _currentCoroutine = StartCoroutine(ToggleDoor());
-     
+            
+
     }
 
     private IEnumerator ToggleDoor()
     {
+        
         Quaternion targetRotation = isOpen ? _closedRotation : _openRotation;
-        isOpen = !isOpen;
+        
 
         while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
             yield return null;
         }
         transform.rotation = targetRotation;
-        
+        isOpen = !isOpen;
     }
 }
