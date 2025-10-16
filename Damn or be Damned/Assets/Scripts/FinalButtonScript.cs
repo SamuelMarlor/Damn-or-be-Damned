@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalButtonScript : MonoBehaviour, IInteractable
 {
@@ -28,11 +29,13 @@ public class FinalButtonScript : MonoBehaviour, IInteractable
             if (playerMorality.MoralityCount >= 50)
             {
                 Debug.Log("Good event triggered");
+                SceneManager.LoadSceneAsync(4);
                 // Place your good event logic here
             }
             else
             {
                 Debug.Log("Bad event triggered");
+                SceneManager.LoadSceneAsync(5);
                 // Place your bad event logic here
             }
         }
